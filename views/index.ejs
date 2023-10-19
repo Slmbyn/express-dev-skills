@@ -10,7 +10,7 @@
     <ul>
       <% skills.forEach((s) => { %>
         <li>
-            <%= s.skill %>
+            <a href="/skills/<%= s.id %>"> <%= s.type %> </a>
           -
             <%= s.completed ? 'Yup' : 'Nope' %>
         </li>

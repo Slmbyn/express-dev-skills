@@ -1,11 +1,17 @@
 const skills = [
-    {type: 'javascript', completed: true},
-    {type: 'HTML', completed: true},
-    {type: 'Express', completed: false}
+    {id: 123, type: 'javascript', completed: true},
+    {id: 473, type: 'HTML', completed: true},
+    {id: 837, type: 'Express', completed: false}
 ];
 
 module.exports = {
-    getAll
+    getAll,
+    getOne
+};
+
+function getOne (id) {
+    id = parseInt(id);
+    return skills.find(skill => skill.id === id);
 };
 
 function getAll(){
